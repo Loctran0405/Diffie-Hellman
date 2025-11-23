@@ -1,0 +1,5 @@
+# Ignore executable files, input/output files, and compiled binaries
+*.exe
+*.out
+*.bin
+*.inp
