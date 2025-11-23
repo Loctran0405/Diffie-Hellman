@@ -275,19 +275,19 @@ int main(int argc, char* argv[]) {
     cout << "p - 1    = " << pMinus1.toReversedHex() << "\n";
 
     cout << "\nU(p) = ";
-    for (auto &u : U) {
-        cout << toDecimalString(u) << " ";
+    for (auto &k : U) {
+        cout << toDecimalString(k) << " ";
     }
     cout << "\n\n";
 
     bool isPrimitive = true;
-    for (auto &u : U) {
-        BigNum exp = pMinus1 / u;
+    for (auto &k : U) {
+        BigNum exp = pMinus1 / k;
         BigNum res = modPow(g, exp, p);
 
-        cout << "u       = " << u.toReversedHex() << "\n";
-        cout << "(p-1)/u = " << exp.toReversedHex() << "\n";
-        cout << "g^((p-1)/u) mod p = " << res.toReversedHex() << "\n\n";
+        cout << "k       = " << k.toReversedHex() << "\n";
+        cout << "(p-1)/k = " << exp.toReversedHex() << "\n";
+        cout << "g^((p-1)/k) mod p = " << res.toReversedHex() << "\n\n";
 
         if (res.cmp(BigNum(1)) == 0) {
             isPrimitive = false;
