@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <vector>
 #include <string>
@@ -293,6 +294,7 @@ int main(int argc, char* argv[]) {
             break;
         }
     }
+    
     fout << (isPrimitive ? 1 : 0) << "\n";
     cout << "Result written to output file: " << (isPrimitive ? 1 : 0) << "\n";
     return 0;
