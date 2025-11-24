@@ -7,6 +7,10 @@
 #include <algorithm>
 #include <cctype>
 using namespace std;
+// using u32 = uint32_t;
+// using u64 = uint64_t;
+// using u128 = __uint128_t;
+// using Big = vector<u32>;
 class BigNum {
 private:
     vector<int> digits;
@@ -92,6 +96,7 @@ int BigNum::cmp(const BigNum &b) const {
             return digits[i] < b.digits[i] ? -1 : 1;
     return 0;
 }
+
 
 bool BigNum::isZero() const { return digits.empty() || digits.size() == 1 && digits[0] == 0; }
 bool BigNum::isOdd() const { return digits[0] & 1; }

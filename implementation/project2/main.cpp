@@ -275,6 +275,7 @@ int main(int argc, char* argv[]) {
     fout << Aout << "\n";
     fout << Bout << "\n";
     fout << Kout << "\n";
+    
     return 0;
 }
 
